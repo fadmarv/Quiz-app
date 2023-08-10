@@ -6,8 +6,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="AI" class="AI">
+        <div class="robot"><img src="img/robot.gif" alt=""></div>
+        <div id="txt" class="txt">
+            “Education’s purpose is to replace an empty mind with an open one.” —Malcolm Forbes
+        </div>
+        <div id="txt2" class="txt2">“An investment in knowledge pays the best interest.” —Benjamin Franklin</div>
+        <div id="txt3" class="txt3">“Education is the most powerful weapon which you can use to change the world.” —Nelson Mandela </div>
+        <div id="txt4" class="txt4">“Education is the key to unlock a golden door of freedom.” —George Washington Carver</div>
+        <div id="txt5" class="txt5">“All real education is the architecture of the soul.” —William Bennett</div>
+        <div id="txt6" class="txt6">
+            “The only person who is educated is the one who has learned how to learn … and change.” —Carl Rogers
+        </div>
+    </div>
     <main>
     <h1 id="header" class="">QUIZ APP</h1>
     <input onchange="change1()" id="first" type="text" placeholder="Firstname">
@@ -18,9 +37,32 @@
     <div id="dis"><img src="img/check.png" alt=""></div>
     <div id="dis2"><img src="img/multiply.png" alt=""></div>
     
-    <button onclick="start()">Start Quiz</button>
+    <button class="startQuiz" id="start" onclick="start()">Start Quiz</button>
     </main>
 
+
+    <nav id="nav1">
+        <button onclick="exit()" id="ex1" class="exit">Exit</button>
+        <!-- <p id="question1">Question 1</p> -->
+    </nav>
+    <section id="section">
+    <div id="questions"></div>
+    <hr>
+    <div onclick="clik0()" id="question1"></div>
+    <div onclick="clik1()" id="question2"></div>
+    <div onclick="clik2()" id="question3"></div>
+    <div onclick="clik3()" id="question4"></div>
+
+    <button onclick="next()" id="ne" class="next">Next</button>
+    <button onclick="pre()" id="pre" class="pre">previous</button>
+    <button onclick="next2()" id="ne2" class="next2">Next</button>
+    <button onclick="pre2()" id="pre2" class="pre">previous</button>
+    <button onclick="next3()" id="ne3" class="next3">Next</button>
+    <button onclick="pre3()" id="pre3" class="pre">previous</button>
+    <button onclick="next4()" id="ne4" class="next4">Next</button>
+    <button onclick="pre4()" id="pre4" class="pre">previous</button>
+
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
