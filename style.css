@@ -26,7 +26,7 @@ input {
 }
 .AI {
     /* background-color: white; */
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     left: 0px;
     height: 42vh;
@@ -519,6 +519,78 @@ section #question4 {
     background-color: teal;
 }
 .next4{
+    display: none;
+    position: absolute;
+    top: 335px;
+    right: 10px;
+    width: 100px;
+    height: 7vh;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    background-color: teal;
+}
+.next5{
+    display: none;
+    position: absolute;
+    top: 335px;
+    right: 10px;
+    width: 100px;
+    height: 7vh;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    background-color: teal;
+}
+.next6{
+    display: none;
+    position: absolute;
+    top: 335px;
+    right: 10px;
+    width: 100px;
+    height: 7vh;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    background-color: teal;
+}
+.next7{
+    display: none;
+    position: absolute;
+    top: 335px;
+    right: 10px;
+    width: 100px;
+    height: 7vh;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    background-color: teal;
+}
+.next8{
+    display: none;
+    position: absolute;
+    top: 335px;
+    right: 10px;
+    width: 100px;
+    height: 7vh;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    background-color: teal;
+}
+.next9{
+    display: none;
+    position: absolute;
+    top: 335px;
+    right: 10px;
+    width: 100px;
+    height: 7vh;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    background-color: teal;
+}
+.submit{
     display: none;
     position: absolute;
     top: 335px;

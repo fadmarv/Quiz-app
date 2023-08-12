@@ -74,6 +74,31 @@ const allQuestion = [
         options : ["(A) 20 years", "(B) 5 years" , "(C) 10 years" , "(D) 15 years"],
         answer : "(C) 10 years"
     },
+    {
+        question : "Question6 : who is the father of atomic bomb",
+        options : ["(A) Niel Bohr", "(B) Albert Einstein", "(C) Max Planck", "(D) Robert Oppenheimer"],
+        answer : "(D) Robert Oppenheimer"
+    },
+    {
+        question : "Question7 : An electric train is traveling SW at 60mph. The wind is blowing from the NE at 10mph. Which way is the smoke blowing?",
+        options : ["(A) East", "(B) Nowhere", "(C) South", "(D) West"],
+        answer : "(B) Nowhere"
+    },
+    {
+        question : "Question8 : Which number should be there next in this series? 25, 24, 22, 19, 15",
+        options : ["(A) 14", "(B) 5", "(C) 30", "(D) 10"],
+        answer : "(D) 10"
+    },
+    {
+        question: "Question9 : Chlorine is first discovered by who ?",
+        options : ["(A) Niel Bohr", "(B) Amedeo Avogadro", "(C) Wilhelm Scheele", "(D)  Humphry Davy"],
+        answer : "(C) Wilhelm Scheele"
+    },
+    {
+        question : "Question10 : HTML stands for ?",
+        options : ["(A) Hyper Text Markup Language", "(B) Hyper Test Modded Language", "(C) Hybrid Text Modded language", "(D) Hyper Test Markup Language"],
+        answer : "(A) Hyper Text Markup Language"
+    }
 ]
 
 const questions = document.querySelector("#questions");
@@ -177,28 +202,49 @@ const clik0 =()=> {
     document.getElementById("question2").style.backgroundColor = "white";
     document.getElementById("question3").style.backgroundColor = "white";
     document.getElementById("question4").style.backgroundColor = "white";
-
     if(score.length == 2) {
         score.push()
     }
     if (score.length == 3) {
         score.push()
     }
-    else if(questions.innerHTML == allQuestion[3].question) {
+    else if (questions.innerHTML == allQuestion[4].question) {
+        score.push()
+    }
+    if (score.length == 5) {
         score.pop(0)
+    }
+    if (score.length == 4) {
+        score.push()
+    }
+    else if(questions.innerHTML == allQuestion[3].question) {
+        score.push()
     }
     else if(questions.innerHTML == allQuestion[2].question) {
+        score.push()
+    }
+    if (score.length == 3) {
         score.pop(0)
     }
-    else if(questions.innerHTML == allQuestion[1].question) {
-        score.pop(0)
+    if(score.length < 3) {
+        score.push(1)
     }
     else if(score.length == 1) {
         score.push()
     }
-    // else if (score.length == 3) {
-    //     score.pop(0)
-    // }
+    else if (questions.innerHTML == allQuestion[1].question) {
+        score.push()
+    }
+    else if (score.length == 2) {
+        score.pop(0)
+    }
+    if(questions.innerHTML == allQuestion[5].question) {
+        score.push()
+    }
+    if(score.length == 6) {
+        score.pop(0)
+    }
+
 
     const answer1 = allQuestion[0].options.find(ans1)
 function ans1(value) {
@@ -232,25 +278,34 @@ const clik1 =()=> {
     if (score.length == 1 ) {
         score.push()
     }
-    else if(score.length == 2) {
+    else if(score.length
+         == 2) {
         score.push()
     }
-    // else if(score.length > 1) {
-    //     score.pop(0)
-    // }
     if (questions.innerHTML == allQuestion[0].question) {
         score.pop(0)
     }
     if (questions.innerHTML == allQuestion[1].question) {
         score.pop(0)
     }
-    // else if (score.length == 3) {
-    //     score.pop(0)
-    // }
     else if (score.length == 2) {
         score.push()
     }
-
+    else if(questions.innerHTML == allQuestion[4].question) {
+        score.push()
+    }
+    if (score.length == 5) {
+        score.pop(0)
+    }
+    if (score.length == 4) {
+        score.push()
+    }
+    if(questions.innerHTML == allQuestion[5].question) {
+        score.push()
+    }
+    if(score.length == 6) {
+        score.pop(0)
+    }
     const answer4 = allQuestion[3].options.find(ans4);
 
     function ans4(value) {
@@ -305,15 +360,13 @@ const clik2 =()=> {
     else if(score.length == 2) {
         score.push()
     }
-    // else if(score.length < 2) {
-    //     score.push(1)
-    // } 
-    // else if (score.length == 3) {
-    //     score.pop(0)
-    // }
-    // else if(score.length > 1) {
-    //     score.pop(0)
-    // }
+    if(questions.innerHTML == allQuestion[5].question) {
+        score.push()
+    }
+    if (score.length == 6) {
+        score.pop(0)
+    }
+    
     const answer2 = allQuestion[1].options.find(ans2)
 
     function ans2(value) {
@@ -361,42 +414,25 @@ const clik3 =()=> {
     if (questions.innerHTML == allQuestion[1].question) {
         score.push()
     }
-    if (questions.innerHTML == allQuestion[4].question) {
-        score.push()
-    }
-    if (score.lenght == 5) {
-        score.pop(0)
-    }
-    else if (score.length == 4) {
-        score.push() 
-    }
     if (questions.innerHTML == allQuestion[3].question) {
         score.push()
-    }
-    if (score.length == 4) {
-        score.pop()
     }
     else if (score.length == 3) {
         score.push()
     }
-    // else if (score.length == 4) {
-    //     score.pop(0)
-    // }
     if (score.length == 1 ) {
         score.pop(0)
     }
-    // if(score.length == 2) {
-    //     score.pop(0)
-
-    // }
-    // else if(score.length > 1) {
-    //     score.pop(0)
-    // }
-
-    // if (questions.innerHTML == allQuestion[0].question) {
-    //     score.pop(0)
-    // }
-    else if(questions.innerHTML != allQuestion[2].question) {
+    else if (questions.innerHTML == allQuestion[4].question) {
+        score.push()
+    }
+    if (score.length == 5) {
+        score.pop(0)
+    }
+    if (score.length == 6) {
+        score.push
+    }
+    else if(questions.innerHTML == allQuestion[2].question) {
         score.push()
     }
 
@@ -409,10 +445,16 @@ const clik3 =()=> {
         if (question4.innerHTML == answer3) {
             score.push(1)
         }    
+
+    const answer6 = allQuestion[5].options.find(ans6)
+
+    function ans6(value) {
+        return value == allQuestion[5].answer;
     }
-
-
-
+        if (question4 == answer6) {
+            score.push(1)
+        }
+    }
 
 
 
@@ -423,18 +465,22 @@ function pre() {
     document.getElementById("question3").style.backgroundColor = "white";
     document.getElementById("question4").style.backgroundColor = "white";
 
-questions.innerHTML = allQuestion[0].question;
-question1.innerHTML = allQuestion[0].options[0];
-question2.innerHTML = allQuestion[0].options[1];
-question3.innerHTML =  allQuestion[0].options[2];
-question4.innerHTML = allQuestion[0].options[3];
+    questions.innerHTML = allQuestion[0].question;
+    question1.innerHTML = allQuestion[0].options[0];
+    question2.innerHTML = allQuestion[0].options[1];
+    question3.innerHTML =  allQuestion[0].options[2];
+    question4.innerHTML = allQuestion[0].options[3];
 
-document.getElementById("pre").style.display = "none";
-document.getElementById("ne").style.left = "135px";
-document.getElementById("ne").style.display = "inline";
-document.getElementById("ne2").style.display = "none";
-document.getElementById("ne3").style.display = "none";
-document.getElementById("ne4").style.display = "none";
+    document.getElementById("pre").style.display = "none";
+    document.getElementById("ne").style.left = "135px";
+    document.getElementById("ne").style.display = "inline";
+    document.getElementById("ne2").style.display = "none";
+    document.getElementById("ne3").style.display = "none";
+    document.getElementById("ne4").style.display = "none";
+    document.getElementById("ne6").style.display = "none";
+    document.getElementById("ne7").style.display = "none";
+    document.getElementById("ne8").style.display = "none";
+    document.getElementById("ne10").style.display = "none";
 }
 
 const next2 = () => {
@@ -453,6 +499,7 @@ const next2 = () => {
     document.getElementById("pre2").style.display = "inline";
     // document.getElementById("pre3").style.display = "inline";
     document.getElementById("ne3").style.display = "inline";
+    document.getElementById("ne6").style.display = "none";
 
     console.log(score)
 }
@@ -473,6 +520,10 @@ const pre2 = () => {
     document.getElementById("ne3").style.display = "none";
     document.getElementById("ne2").style.display = "inline";
     document.getElementById("ne4").style.display = "none";
+    document.getElementById("ne6").style.display = "none";
+    document.getElementById("ne7").style.display = "none";
+    document.getElementById("ne8").style.display = "none";
+    document.getElementById("ne10").style.display = "none";
     console.log(score)
 }
 
@@ -494,6 +545,7 @@ const next3 = () => {
     document.getElementById("ne2").style.display = "none";
     document.getElementById("ne3").style.display = "none";
     document.getElementById("ne4").style.display = "inline";
+    document.getElementById("ne6").style.display = "none";
     console.log(score)
 }
 const pre3 = () => {
@@ -501,7 +553,7 @@ const pre3 = () => {
     document.getElementById("question1").style.backgroundColor = "white";
     document.getElementById("question3").style.backgroundColor = "white";
     document.getElementById("question4").style.backgroundColor = "white";
-
+    document.getElementById("ne5").style.display = "none";
     questions.innerHTML = allQuestion[2].question;
     question1.innerHTML = allQuestion[2].options[0];
     question2.innerHTML = allQuestion[2].options[1];
@@ -513,6 +565,10 @@ const pre3 = () => {
     document.getElementById("ne3").style.display = "inline";
     document.getElementById("ne2").style.display = "none";
     document.getElementById("ne4").style.display = "none";
+    document.getElementById("ne6").style.display = "none";
+    document.getElementById("ne7").style.display = "none";
+    document.getElementById("ne8").style.display = "none";
+    document.getElementById("ne10").style.display = "none";
     console.log(score)
 }
 
@@ -530,6 +586,12 @@ const next4 = () => {
     document.getElementById("pre2").style.display = "none";
     document.getElementById("pre3").style.display = "none";
     document.getElementById("pre4").style.display = "inline";
+    document.getElementById("ne4").style.display = "none";
+    document.getElementById("ne5").style.display = "inline";
+    document.getElementById("ne6").style.display = "none";
+    // document.getElementById("ne6").style.display = "none";
+    let ne6 = document.getElementById("ne6");
+    ne6.style.display = "none"
     // document.getElementById("pre").style.display = "none";
     // document.getElementById("pre2").style.display = "none";
     // document.getElementById("ne2").style.display = "none";
@@ -541,7 +603,7 @@ const pre4 = () => {
     document.getElementById("question1").style.backgroundColor = "white";
     document.getElementById("question3").style.backgroundColor = "white";
     document.getElementById("question4").style.backgroundColor = "white";
-
+    document.getElementById("ne5").style.display = "none";
     questions.innerHTML = allQuestion[3].question;
     question1.innerHTML = allQuestion[3].options[0];
     question2.innerHTML = allQuestion[3].options[1];
@@ -552,7 +614,185 @@ const pre4 = () => {
     document.getElementById("pre3").style.display = "inline";
     document.getElementById("pre4").style.display = "none";
     document.getElementById("ne3").style.display = "inline";
+    document.getElementById("ne6").style.display = "none";
+    document.getElementById("ne7").style.display = "none";
+    document.getElementById("ne8").style.display = "none";
+    document.getElementById("ne10").style.display = "none";
     // document.getElementById("ne2").style.display = "inline";
     // document.getElementById("ne4").style.display = "none";
     console.log(score)
 }
+
+const next5 = () => {
+    document.getElementById("question2").style.backgroundColor = "white";
+    document.getElementById("question1").style.backgroundColor = "white";
+    document.getElementById("question3").style.backgroundColor = "white";
+    document.getElementById("question4").style.backgroundColor = "white";
+    questions.innerHTML = allQuestion[5].question;
+    question1.innerHTML = allQuestion[5].options[0];
+    question2.innerHTML = allQuestion[5].options[1];
+    question3.innerHTML = allQuestion[5].options[2];
+    question4.innerHTML = allQuestion[5].options[3];
+    document.getElementById("pre2").style.display = "none";
+    document.getElementById("pre4").style.display = "none";
+    document.getElementById("pre5").style.display = "inline";
+    
+    document.getElementById("ne5").style.display = "none";
+    document.getElementById("ne6").style.display = "inline";
+
+    console.log(score);
+}
+
+const pre5 = () => {
+    document.getElementById("question2").style.backgroundColor = "white";
+    document.getElementById("question1").style.backgroundColor = "white";
+    document.getElementById("question3").style.backgroundColor = "white";
+    document.getElementById("question4").style.backgroundColor = "white";
+
+    questions.innerHTML = allQuestion[4].question;
+    question1.innerHTML = allQuestion[4].options[0];
+    question2.innerHTML =  allQuestion[4].options[1];
+    question3.innerHTML = allQuestion[4].options[2];
+    question4.innerHTML =allQuestion [4].options[3] ;
+    document.getElementById("pre4").style.display = "inline";
+    document.getElementById("pre5").style.display = "none";
+    document.getElementById("ne5").style.display = "inline";
+    document.getElementById("ne4").style.display = "none";
+    document.getElementById("ne7").style.display = "none";
+    document.getElementById("ne8").style.display = "none";
+    document.getElementById("ne10").style.display = "none";
+}
+
+const next6 = () => {
+    document.getElementById("question2").style.backgroundColor = "white";
+    document.getElementById("question1").style.backgroundColor = "white";
+    document.getElementById("question3").style.backgroundColor = "white";
+    document.getElementById("question4").style.backgroundColor = "white";
+    questions.innerHTML = allQuestion[6].question;
+    question1.innerHTML = allQuestion[6].options[0];
+    question2.innerHTML = allQuestion[6].options[1];
+    question3.innerHTML = allQuestion[6].options[2];
+    question4.innerHTML = allQuestion[6].options[3];
+    document.getElementById("pre2").style.display = "none";
+    document.getElementById("pre4").style.display = "none";
+    document.getElementById("pre5").style.display = "none";
+    document.getElementById("pre6").style.display = "inline";
+    document.getElementById("ne6").style.display = "none";
+    document.getElementById("ne7").style.display = "inline";
+    console.log(score)
+}
+
+const pre6 = () => {
+    questions.innerHTML = allQuestion[5].question;
+    question1.innerHTML = allQuestion[5].options[0];
+    question2.innerHTML = allQuestion[5].options[1];
+    question3.innerHTML = allQuestion[5].options[2];
+    question4.innerHTML = allQuestion[5].options[3];
+    document.getElementById("pre5").style.display = "inline";
+    document.getElementById("pre6").style.display = "none";
+    document.getElementById("ne6").style.display = "none";
+    document.getElementById("ne5").style.display = "inline";
+    document.getElementById("ne7").style.display = "none";
+    document.getElementById("ne8").style.display = "none";
+    document.getElementById("ne10").style.display = "none";
+}
+
+const next7 = () => {
+    document.getElementById("question2").style.backgroundColor = "white";
+    document.getElementById("question1").style.backgroundColor = "white";
+    document.getElementById("question3").style.backgroundColor = "white";
+    document.getElementById("question4").style.backgroundColor = "white";
+    questions.innerHTML = allQuestion[7].question;
+    question1.innerHTML = allQuestion[7].options[0];
+    question2.innerHTML = allQuestion[7].options[1];
+    question3.innerHTML = allQuestion[7].options[2];
+    question4.innerHTML = allQuestion[7].options[3];
+    document.getElementById("pre2").style.display = "none";
+    document.getElementById("pre4").style.display = "none";
+    document.getElementById("pre5").style.display = "none";
+    document.getElementById("pre6").style.display = "none";
+    document.getElementById("pre7").style.display = "inline";
+    document.getElementById("ne7").style.display = "none";
+    document.getElementById("ne8").style.display = "inline";
+    console.log(score)
+}
+
+const pre7 = () => {
+    questions.innerHTML = allQuestion[6].question;
+    question1.innerHTML = allQuestion[6].options[0];
+    question2.innerHTML = allQuestion[6].options[1];
+    question3.innerHTML = allQuestion[6].options[2];
+    question4.innerHTML = allQuestion[6].options[3];
+    document.getElementById("ne6").style.display = "none";
+    document.getElementById("pre7").style.display = "none";
+    document.getElementById("pre6").style.display = "inline";
+    document.getElementById("ne8").style.display = "none";
+    document.getElementById("ne7").style.display = "inline";
+    document.getElementById("ne10").style.display = "none";
+}
+
+const next8 = () => {
+    document.getElementById("question2").style.backgroundColor = "white";
+    document.getElementById("question1").style.backgroundColor = "white";
+    document.getElementById("question3").style.backgroundColor = "white";
+    document.getElementById("question4").style.backgroundColor = "white";
+    questions.innerHTML = allQuestion[8].question;
+    question1.innerHTML = allQuestion[8].options[0];
+    question2.innerHTML = allQuestion[8].options[1];
+    question3.innerHTML = allQuestion[8].options[2];
+    question4.innerHTML = allQuestion[8].options[3];
+    document.getElementById("pre2").style.display = "none";
+    document.getElementById("pre4").style.display = "none";
+    document.getElementById("pre5").style.display = "none";
+    document.getElementById("pre6").style.display = "none";
+    document.getElementById("pre7").style.display = "none";
+    document.getElementById("pre8").style.display = "inline";
+    document.getElementById("ne8").style.display = "none";
+    document.getElementById("ne9").style.display = "inline";
+    console.log(score)
+}
+
+const pre8 = () => {
+    questions.innerHTML = allQuestion[7].question;
+    question1.innerHTML = allQuestion[7].options[0];
+    question2.innerHTML = allQuestion[7].options[1];
+    question3.innerHTML = allQuestion[7].options[2];
+    question4.innerHTML = allQuestion[7].options[3];
+    document.getElementById("ne7").style.display = "none";
+    document.getElementById("pre8").style.display = "none";
+    document.getElementById("pre7").style.display = "inline";
+    document.getElementById("ne10").style.display = "none";
+    document.getElementById("ne9").style.display = "none";
+    document.getElementById("ne8").style.display = "inline";
+}
+
+const next9 = () => {
+    document.getElementById("question2").style.backgroundColor = "white";
+    document.getElementById("question1").style.backgroundColor = "white";
+    document.getElementById("question3").style.backgroundColor = "white";
+    document.getElementById("question4").style.backgroundColor = "white";
+    questions.innerHTML = allQuestion[9].question;
+    question1.innerHTML = allQuestion[9].options[0];
+    question2.innerHTML = allQuestion[9].options[1];
+    question3.innerHTML = allQuestion[9].options[2];
+    question4.innerHTML = allQuestion[9].options[3];
+    document.getElementById("ne9").style.display = "none";
+    document.getElementById("ne10").style.display = "inline";
+    document.getElementById("pre8").style.display = "none";
+    document.getElementById("pre9").style.display = "inline";
+    console.log(score)
+}
+
+const pre9 = () => {
+    questions.innerHTML = allQuestion[8].question;
+    question1.innerHTML = allQuestion[8].options[0];
+    question2.innerHTML = allQuestion[8].options[1];
+    question3.innerHTML = allQuestion[8].options[2];
+    question4.innerHTML = allQuestion[8].options[3];
+    document.getElementById("ne8").style.display = "none";
+    document.getElementById("pre9").style.display = "none";
+    document.getElementById("pre8").style.display = "inline";
+    document.getElementById("ne9").style.display = "inline";
+    document.getElementById("ne10").style.display = "none"
+}
+
