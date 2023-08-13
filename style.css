@@ -37,7 +37,7 @@ input {
     display: none;
 }
 .robot {
-    position: absolute;
+    position: fixed;
     /* background-color: aqua; */
     height: 42vh;
     width: 50%;
@@ -46,6 +46,7 @@ input {
     justify-content: center;
     animation: 1s slide-down ease-in-out;
     z-index: 10;
+    background: none;
 }
 @keyframes slide-down {
     0% {
@@ -56,11 +57,11 @@ input {
     }
 }
 .robot img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }
 .txt {
-    position: absolute;
+    position: fixed;
     right: 0;
     /* background-color: blue; */
     height: 42vh;
@@ -72,6 +73,7 @@ input {
     color: orange;
     font-size: 20px;
     animation: 1s slide-in ease-in-out;
+    background: none;
 }
 @keyframes slide-in {
     0% {
@@ -83,7 +85,7 @@ input {
 }
 
 .txt2 {
-    position: absolute;
+    position: fixed;
     right: 0;
     /* background-color: blue; */
     height: 42vh;
@@ -96,6 +98,7 @@ input {
     font-size: 20px;
     animation: 1s slide-in2 ease-in-out;
     display: none;
+    background: none;
 }
 @keyframes slide-in2 {
     0% {
@@ -106,7 +109,7 @@ input {
     }
 }
 .txt3 {
-    position: absolute;
+    position: fixed;
     right: 0;
     /* background-color: blue; */
     height: 42vh;
@@ -119,6 +122,7 @@ input {
     font-size: 20px;
     animation: 1s slide-in3 ease-in-out;
     display: none;
+    background: none;
 }
 @keyframes slide-in3 {
     0% {
@@ -129,7 +133,7 @@ input {
     }
 }
 .txt4 {
-    position: absolute;
+    position: fixed;
     right: 0;
     /* background-color: blue; */
     height: 42vh;
@@ -142,6 +146,7 @@ input {
     font-size: 20px;
     animation: 1s slide-in4 ease-in-out;
     display: none;
+    background: none;
 }
 @keyframes slide-in4 {
     0% {
@@ -152,7 +157,7 @@ input {
     }
 }
 .txt5 {
-    position: absolute;
+    position: fixed;
     right: 0;
     /* background-color: blue; */
     height: 42vh;
@@ -165,6 +170,7 @@ input {
     font-size: 20px;
     animation: 1s slide-in5 ease-in-out;
     display: none;
+    background: none;
 }
 @keyframes slide-in5 {
     0% {
@@ -175,7 +181,7 @@ input {
     }
 }
 .txt6 {
-    position: absolute;
+    position: fixed;
     right: 0;
     /* background-color: blue; */
     height: 42vh;
@@ -188,6 +194,7 @@ input {
     font-size: 20px;
     animation: 1s slide-in6 ease-in-out;
     display: none;
+    background: none;
 }
 @keyframes slide-in6 {
     0% {
@@ -778,10 +785,50 @@ b {
     } */
 
     .AI {
-        position: absolute;
+        position: fixed;
         left: 0px;
         top: 100px;
         width: 34vw;
+        /* background-color: white; */
+        background: none;
+    }
+    .robot {
+        width: 15vw;
+        /* background-color: aqua; */
+        background: none;
+    }
+    .txt {
+        position: absolute;
+        /* background-color: blue; */
+        /* width: 15vw; */
+        background: none;
+    }
+    .txt2 {
+        position: absolute;
+        /* background-color: blue; */
+        /* width: 15vw; */
+        background: none;
+    }
+    .txt3 {
+        position: absolute;
+        /* background-color: blue; */
+        /* width: 15vw; */
+    }
+    .txt4 {
+        position: absolute;
+        /* background-color: blue; */
+        /* width: 15vw; */
+        background: none;
+    }
+    .txt5 {
+        position: absolute;
+        /* background-color: blue; */
+        /* width: 15vw; */
+    }
+    .txt6 {
+        position: absolute;
+        /* background-color: blue; */
+        /* width: 15vw; */
     }
     section {
         margin: auto;
