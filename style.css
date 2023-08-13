@@ -780,56 +780,6 @@ b {
     img {
         height: 12px;
     }
-    /* .butzdiv {
-        display: block;
-    } */
-
-    .AI {
-        position: fixed;
-        left: 0px;
-        top: 100px;
-        width: 34vw;
-        /* background-color: white; */
-        background: none;
-    }
-    .robot {
-        width: 15vw;
-        /* background-color: aqua; */
-        background: none;
-    }
-    .txt {
-        position: absolute;
-        /* background-color: blue; */
-        /* width: 15vw; */
-        background: none;
-    }
-    .txt2 {
-        position: absolute;
-        /* background-color: blue; */
-        /* width: 15vw; */
-        background: none;
-    }
-    .txt3 {
-        position: absolute;
-        /* background-color: blue; */
-        /* width: 15vw; */
-    }
-    .txt4 {
-        position: absolute;
-        /* background-color: blue; */
-        /* width: 15vw; */
-        background: none;
-    }
-    .txt5 {
-        position: absolute;
-        /* background-color: blue; */
-        /* width: 15vw; */
-    }
-    .txt6 {
-        position: absolute;
-        /* background-color: blue; */
-        /* width: 15vw; */
-    }
     section {
         margin: auto;
         width: 50vw;

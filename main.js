@@ -14,36 +14,6 @@ let txt4 = document.getElementById("txt4")
 let txt5 = document.getElementById("txt5")
 let txt6 = document.getElementById("txt6")
 
-// setTimeout(function(){
-//     AI.style.display = "block";
-
-//     setTimeout(function(){
-//         txt.style.display = "none";
-//         txt2.style.display = "flex";
-
-//         setTimeout(function(){
-//             txt2.style.display = "none";
-//             txt3.style.display = "flex";
-
-//             setTimeout(function(){
-//                 txt3.style.display = "none";
-//                 txt4.style.display = "flex";
-
-//                 setTimeout(function(){
-//                     txt4.style.display = "none";
-//                     txt5.style.display = "flex";
-
-//                     setTimeout(function(){
-//                         txt5.style.display = "none";
-//                         txt6.style.display = "flex";
-//                     },10000)
-//                 },10000)
-//             },10000)
-//         },10000)
-//     },10000)
-// },5000)
-
-
 
 
 
@@ -275,7 +245,6 @@ function ans1(value) {
 }
 
 const clik1 =()=> {
-    AI.style.display = "none";
     document.getElementById("question1").style.backgroundColor = "white";
     document.getElementById("question3").style.backgroundColor = "white";
     document.getElementById("question4").style.backgroundColor = "white";
@@ -424,6 +393,7 @@ const clik2 =()=> {
     if(question3.innerHTML == answer9) {
         score.push(1)
     }
+
 }
 const clik3 =()=> {
     document.getElementById("question2").style.backgroundColor = "white";
