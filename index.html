@@ -12,6 +12,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="AI" class="AI">
@@ -52,7 +58,7 @@
     <div onclick="clik1()" id="question2"></div>
     <div onclick="clik2()" id="question3"></div>
     <div onclick="clik3()" id="question4"></div>
-
+    
     <button onclick="next()" id="ne" class="next">Next</button>
     <button onclick="pre()" id="pre" class="pre">previous</button>
     <button onclick="next2()" id="ne2" class="next2">Next</button>
@@ -73,6 +79,18 @@
     <button onclick="next10()" id="ne10" class="submit">Finish</button>
     <button onclick="pre9()" id="pre9" class="pre">previous</button>
     </section>
+
+    <div id="pop-up-msg" class="pop-up">
+        <h2>Are you sure you want to submit</h2>
+        <aside>
+            <button onclick="yes()">Yes</button>
+            <button onclick="no()">No</button>
+        </aside>
+    </div>
+    <div id="result" class="result">
+        <p id="txt-msg"></p>
+        <b id="txt-score"></b>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
 </body>

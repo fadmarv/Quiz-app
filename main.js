@@ -198,7 +198,7 @@ const next = () => {
 }
 
 const clik0 =()=> {
-    document.getElementById("question1").style.backgroundColor = "green";
+    document.getElementById("question1").style.backgroundColor = "rgb(170, 230, 170)";
     document.getElementById("question2").style.backgroundColor = "white";
     document.getElementById("question3").style.backgroundColor = "white";
     document.getElementById("question4").style.backgroundColor = "white";
@@ -212,7 +212,7 @@ const clik0 =()=> {
         score.push()
     }
     if (score.length == 5) {
-        score.pop(0)
+        score.push(-1)
     }
     if (score.length == 4) {
         score.push()
@@ -266,6 +266,13 @@ function ans1(value) {
     // else if(score.length > 1) {
     //     score.pop(0)
     // }
+    const answer10 = allQuestion[9].options.find(ans10);
+    function ans10(value) {
+        return value == allQuestion[9].answer;
+    }
+    if(question1.innerHTML == answer10) {
+        score.push(1)
+    }
 }
 
 const clik1 =()=> {
@@ -273,13 +280,12 @@ const clik1 =()=> {
     document.getElementById("question1").style.backgroundColor = "white";
     document.getElementById("question3").style.backgroundColor = "white";
     document.getElementById("question4").style.backgroundColor = "white";
-    document.getElementById("question2").style.backgroundColor = "green";
+    document.getElementById("question2").style.backgroundColor = "rgb(170, 230, 170)";
 
     if (score.length == 1 ) {
         score.push()
     }
-    else if(score.length
-         == 2) {
+    else if(score.length == 2) {
         score.push()
     }
     if (questions.innerHTML == allQuestion[0].question) {
@@ -294,17 +300,20 @@ const clik1 =()=> {
     else if(questions.innerHTML == allQuestion[4].question) {
         score.push()
     }
-    if (score.length == 5) {
-        score.pop(0)
-    }
+    // if (score.length == 5) {
+    //     score.push(-1)
+    // }
     if (score.length == 4) {
         score.push()
     }
     if(questions.innerHTML == allQuestion[5].question) {
         score.push()
     }
-    if(score.length == 6) {
-        score.pop(0)
+    // if(score.length == 6) {
+    //     score.push()
+    // }
+    if(score.length == 7) {
+        score.push()
     }
     const answer4 = allQuestion[3].options.find(ans4);
 
@@ -332,12 +341,20 @@ const clik1 =()=> {
             score.push(1)
         }   
     }
+
+    const answer7 = allQuestion[6].options.find(ans7) 
+    function ans7(value) {
+        return value == allQuestion[6].answer;
+    }
+    if(question2.innerHTML == answer7) {
+        score.push(1)
+    }
 }
 const clik2 =()=> {
     document.getElementById("question2").style.backgroundColor = "white";
     document.getElementById("question1").style.backgroundColor = "white";
     document.getElementById("question4").style.backgroundColor = "white";
-    document.getElementById("question3").style.backgroundColor = "green";
+    document.getElementById("question3").style.backgroundColor = "rgb(170, 230, 170)";
 
     // if (questions.innerHTML == allQuestion[0].question) {
     //     score.pop(0)
@@ -366,7 +383,9 @@ const clik2 =()=> {
     if (score.length == 6) {
         score.pop(0)
     }
-    
+    if(score.length == 9) {
+        score.push()
+    }
     const answer2 = allQuestion[1].options.find(ans2)
 
     function ans2(value) {
@@ -400,12 +419,18 @@ const clik2 =()=> {
             score.push(1)
         }    
     }
+
+    const answer9 = allQuestion[8].options.find(ans9);
+    function ans9(value){return value==allQuestion[8].answer;}
+    if(question3.innerHTML == answer9) {
+        score.push(1)
+    }
 }
 const clik3 =()=> {
     document.getElementById("question2").style.backgroundColor = "white";
     document.getElementById("question1").style.backgroundColor = "white";
     document.getElementById("question3").style.backgroundColor = "white";
-    document.getElementById("question4").style.backgroundColor = "green";
+    document.getElementById("question4").style.backgroundColor = "rgb(170, 230, 170)";
 
     if (questions.innerHTML == allQuestion[0].answer) {
         score.push()
@@ -426,35 +451,45 @@ const clik3 =()=> {
     else if (questions.innerHTML == allQuestion[4].question) {
         score.push()
     }
-    if (score.length == 5) {
-        score.pop(0)
-    }
-    if (score.length == 6) {
-        score.push
+    
+    else if (score.length == 6) {
+        score.push()
     }
     else if(questions.innerHTML == allQuestion[2].question) {
         score.push()
+    }   
+    if (score.length == 8) {
+        score.push()
     }
+    
 
     const answer3 = allQuestion[2].options.find(ans3)
 
     function ans3(value) {
         return value == allQuestion[2].answer
     }
-
+    
         if (question4.innerHTML == answer3) {
             score.push(1)
         }    
 
     const answer6 = allQuestion[5].options.find(ans6)
 
-    function ans6(value) {
-        return value == allQuestion[5].answer;
-    }
-        if (question4 == answer6) {
+        function ans6(value) {
+            return value == allQuestion[5].answer;
+        }
+        if (question4.innerHTML == answer6) {
             score.push(1)
         }
+        const answer8 = allQuestion[7].options.find(ans8);
+        function ans8(value) {
+            return value == allQuestion[7].answer;
+        }
+        if(question4.innerHTML == answer8) {
+            score.push(1);
+        }
     }
+
 
 
 
@@ -796,3 +831,29 @@ const pre9 = () => {
     document.getElementById("ne10").style.display = "none"
 }
 
+const next10 = () => {
+    console.log(score)
+
+    document.getElementById("pop-up-msg").style.display = "block"
+}
+
+const no = () => {
+    document.getElementById("pop-up-msg").style.display = "none";
+}
+const yes = () => {
+    document.getElementById("pop-up-msg").style.display = "none";
+    document.getElementById("section").style.display = "none";
+
+    document.getElementById("result").style.display = "grid";
+    let txt = document.getElementById("txt-msg")
+    txt.innerHTML = "Dear " + firstName.value + " " + lastName.value + " your score is";
+    let txtScore = document.getElementById("txt-score")
+
+     let totalScore = score.reduce(reFunction)
+    
+    function reFunction(total,value) {
+        return total + value;
+    } 
+
+    txtScore.innerHTML = totalScore;
+}
